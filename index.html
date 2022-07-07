@@ -1,23 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="style.css" />
-    <title>BuzzQuizz</title>
-  </head>
 
-  <body>
-    <div class="header"></div>
-    <div class="feed"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="reset.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Fashion Driven</title>
+</head>
 
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+<body>
+
+  <div class="header">
+    <img src="assets/Logo.png" alt="logo">
+  </div>
+
+  <div class="feed">
+
+    <div class="menu">
+
+      <div class="modelo">
+        <p class="titulo">Escolha o modelo</p>
+        <div class="escolha">
+          <div>
+            <div class="t-shirt circulo">
+              <img src="assets/tshirt.png" style="width: 80px">
+            </div>
+            <p>T-shirt</p>
+          </div>
+          <div>
+            <div class="camiseta circulo">
+              <img src="assets/Camiseta.png" style="width: 80px">
+            </div>
+            <p>Camiseta</p>
+          </div>
+          <div>
+            <div class="manga-longa circulo">
+              <img src="assets/Mangalonga.png" style="width: 80px">
+            </div>
+            <p>Manga Longa</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="gola">
+
+        <p class="titulo">Escolha o gola</p>
+        <div class="escolha">
+          <div>
+            <div class="gola-v circulo">
+              <img src="assets/GolaV.png" style="width: 80px">
+            </div>
+            <p>Gola V</p>
+          </div>
+          <div>
+            <div class="gola-redonda circulo">
+              <img src="assets/GolaRedonda.png" style="width: 80px">
+            </div>
+            <p>Gola Redonda</p>
+          </div>
+          <div>
+            <div class="gola-polo circulo">
+              <img src="assets/GolaPolo.png" style="width: 80px">
+            </div>
+            <p>Gola Polo</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tecido">
+        <p class="titulo">Escolha o tecido</p>
+        <div class="escolha">
+          <div>
+            <div class="seda circulo">
+              <img src="assets/Seda.png" style="width: 54px">
+            </div>
+            <p>Seda</p>
+          </div>
+          <div>
+            <div class="algodao circulo">
+              <img src="assets/Algodão.png" style="width: 60px">
+            </div>
+            <p>Algodão</p>
+          </div>
+          <div>
+            <div class="poliester circulo">
+              <img src="assets/Poliester.png" style="width: 60px">
+            </div>
+            <p>Poliéster</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="referencia">
+        <p class="titulo">Imagem de referência</p>
+        <div>
+          <input type="text" placeholder="Insira o link">
+          <button>Confirmar pedido</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="image">
+      <img src="assets/ilustração.png" alt="">
+    </div>
+  </div>
+
+
+  <div class="pedido">
+    <div class="titulo-pedido">Últimos pedidos</div>
+    <ul>
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>

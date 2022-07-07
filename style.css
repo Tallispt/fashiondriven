@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.header {
+  height: 89px;
+  background-color: #404EED;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+}
+
+.feed {
+  display: flex;
+
+}
+
+.menu,
+.image {
+  width: 50vw;
+  /* height: 785px; */
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 40px 0 40px 135px;
+}
+
+.menu p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #232323;
+}
+
+.titulo {
+  padding-bottom: 18px;
+}
+
+.escolha>div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px
+}
+
+.circulo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  background-color: #C4C4C4;
+  border: 0.5px solid #C4C4C4;
+  position: relative;
+}
+
+.menu img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.image {
+  background-color: #404EED;
+  padding: 50px 30px
+}
+
+.image img {
+  width: 100%;
+}
+
+.escolha {
+  display: flex;
+  gap: 45px;
+}
+
+.referencia>div {
+  display: flex;
+  flex-direction: column;
+  gap: 24px
+}
+
+.referencia input {
+  width: 396px;
+  height: 40px;
+  background: #F2F2F2;
+  border-radius: 10px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #232323;
+  padding-left: 16px;
+}
+
+.referencia input::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #818181;
+  padding-left: 16px;
+}
+
+.referencia button {
+  width: 398.61px;
+  height: 40px;
+  background-color: #404EED;
+  border-radius: 10px;
+  border: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #FCFCFC;
+}
+
+.pedido {
+  height: min-content;
+  background-color: #F2F2F2;
+  padding: 31px 70px 31px 122px;
+}
+
+.titulo-pedido {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  color: #232323;
+  padding-bottom: 15px;
+}
+
+.pedido ul {
+  display: flex;
+  gap: 16px;
+  overflow-x: scroll;
+}
+
+.pedido li {
+  width: 202px;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 17px 0;
+}
+
+ul img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+
+}
+
+ul p {
+  font-size: 20px;
+  line-height: 23px;
+  color: #232323;
+  text-align: center;
+}
+
+@media(max-width: 720px) {
+  .menu {
+    width: 100%;
+    padding: 21px 0 50px 0;
+    align-items: center;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .pedido {
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 27px 0;
+  }
+
+  .pedido ul {
+    flex-direction: column;
+  }
+
+}
