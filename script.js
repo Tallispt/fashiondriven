@@ -1,4 +1,4 @@
-let name, modelo, gola, tecido, image;
+let name, modelo, gola, tecido, image, owner;
 let estoque = Array(10)
 
 function getName() {
@@ -6,6 +6,7 @@ function getName() {
     while (typeof (name) !== "string") {
         name = prompt("Qual seu nome?")
     }
+    owner = name
 }
 
 function select(child, parent) {
@@ -45,9 +46,8 @@ function setImage() {
 }
 
 function setReady() {
-    if (modelo && gola && tecido && image) {
-        document.querySelector('.referencia button').classList.add('pronto')
-    }
+    let verificaUrl = /^[a-zA-Z0-9-_]+[:./\\]+([a-zA-Z0-9 -_./:=&"'?%+@#$!])+$/
+    if (modelo && gola && tecido && verificaUrl.test(image)) { document.querySelector('.referencia button').classList.add('pronto') }
 }
 
 function create() {
@@ -57,7 +57,7 @@ function create() {
             "neck": gola,
             "material": tecido,
             "image": image,
-            "owner": name,
+            "owner": owner,
             "author": name
         }
 
@@ -65,20 +65,29 @@ function create() {
 
         promise
             .catch(err => alert('Ops, não conseguimos processar sua encomenda.'))
-            .then(resp => alert(`Pedido de ${resp.data.owner} confirmado.`))
-        lastOrders()
+            .then(resp => {
+                alert(`Pedido de ${name} confirmado.`)
+                lastOrders()
+            })
     }
 }
 
+function foi(elem, item) {
+    if (item.id === elem.id) {
+        return true
+    } else return false
+}
+
 function clickOrder(elem) {
-    let pedido = estoque.filter(item => item.id === elem.id)
+    let pedido = estoque.filter((item) => String(item.id) === String(elem.id))[0]
     let confirmar = confirm('Você deseja encomendar este mesmo modelo?')
-    if(confirmar) {
+    if (confirmar) {
         modelo = pedido.model
         gola = pedido.neck
         tecido = pedido.material
         image = pedido.image
         owner = pedido.owner
+        create()
     }
 }
 
@@ -88,7 +97,7 @@ function lastOrders() {
         .catch(err => console.log(err))
         .then(response => {
             let list = document.querySelector('.pedido ul')
-
+            list.innerHTML = ''
             for (let i = 0; i < 10; i++) {
                 list.innerHTML +=
                     `<li onclick='clickOrder(this)' id='${response.data[i].id}'>
@@ -101,5 +110,5 @@ function lastOrders() {
         })
 }
 
-//getName()
+getName()
 lastOrders()

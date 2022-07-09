@@ -2,7 +2,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  box-sizing: border-box !important;
+  box-sizing: border-box;
 }
 
 strong {
@@ -25,14 +25,14 @@ strong {
 .menu,
 .image {
   width: 50vw;
-  /* height: 785px; */
 }
 
 .menu {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 30px;
-  padding: 40px 0 40px 135px;
+  padding: 40px 20px;
 }
 
 .menu p {
@@ -59,7 +59,7 @@ strong {
   height: 100px;
   border-radius: 50px;
   background-color: #C4C4C4;
-  border: 0.5px solid #C4C4C4;
+  border: 3px solid #C4C4C4;
   position: relative;
 }
 
@@ -76,11 +76,15 @@ strong {
 
 .image {
   background-color: #404EED;
-  padding: 50px 30px
+  padding: 50px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image img {
   width: 100%;
+  min-height: 470px;
 }
 
 .escolha {
@@ -112,7 +116,6 @@ strong {
   font-size: 14px;
   line-height: 16px;
   color: #818181;
-  padding-left: 16px;
 }
 
 .referencia button {
@@ -176,7 +179,7 @@ ul p {
   text-align: center;
 }
 
-@media(max-width: 720px) {
+@media(max-width: 800px) {
   .menu {
     width: 100%;
     padding: 21px 0 50px 0;
